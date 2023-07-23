@@ -1,0 +1,84 @@
+#browser {
+    /--colorBgIntense: #111014 !important;
+}
+
+#tabs-tabbar-container.top {
+  /*padding-top: 5px !important;*/
+  
+}
+
+.UrlBar-AddressField .ContentBlocker-Control,
+.UrlBar-AddressField .ToolbarButton-Button,
+.UrlBar-AddressField .SiteInfoButton-SecurityBadge,
+.UrlBar-AddressField .drop-down-menu,
+.button-addressfield.SiteInfoButton.internal > img {
+    display: none;
+}
+
+webview[src="about:blank"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorBg);
+}
+
+/* Panel automate switch */
+
+#panels-container.overlay, #panels-container.icons {width:0 !important;}
+#panels {overflow:visible; padding:0 !important;}
+:not(.resizing)#panels-container.overlay .panel-group {transition: width 0s linear !important;}
+#panels-container.right.overlay > .SlideBar--FullHeight.alternate {margin-left:-35px;}
+#panels-container.overlay #switch, #panels-container:not(.overlay).icons #switch {background-color: var(--colorBgIntense) !important;}
+#panels-container #switch {height: 100%; flex-basis:35px; visibility:visible !important; z-index:3;}
+#panels-container.icons:not(:hover) #switch, #panels-container.switcher:not(:hover) #switch {height: 50px; flex-basis: 5px; opacity: 0; margin: 0 2px; transition: 0, background-color 0s 0s, opacity 0s 1s !important;}
+
+
+/* find bar */
+.active.visible.webpageview .find-in-page {position:absolute; bottom:-1px; z-index:1; margin: 0 auto; left:0; right:0; max-width: fit-content; border-radius: calc(var(--radius) * 1.3); padding-left: 6px;}
+.find-in-page .fip-input-label {display:none;}
+.find-in-page .fip-checkbox-label {font-size: 80%; transition: font-size .15s !important;}
+.find-in-page > .toolbar.toolbar-group button svg {transform:rotate(90deg);}
+
+/* hide title bar when tab list is vertical */
+#header { display: none; }
+
+
+/* side tab bar automatic popup */
+
+// #tabs-tabbar-container:is(.left, .right) {position: fixed; height: -webkit-fill-available !important; box-shadow: #0008 0 0 2px, rgb(0 0 0 / 25%) 0px 3px 6px; clip-path:inset(0 -50px 0 -50px); transition: .15s ease-out .1s !important;}
+// #tabs-tabbar-container.left {left:0; z-index:1;}
+// #panels-container.left ~ div > #tabs-tabbar-container.left {left: unset;}
+// #tabs-tabbar-container.right {right:0;}
+// #panels-container.right ~ #tabs-tabbar-container.right {right:35px;}
+
+// #tabs-tabbar-container.left:not(:focus-within):not(:hover) {will-change: clip-path; clip-path:inset(0% calc(100% - 30px) 0% 0%); transition: .15s ease-out .5s !important;}
+// #tabs-tabbar-container.right:not(:focus-within):not(:hover) {will-change: transform; transform: translateX(calc(100% - 30px)); transition: .15s ease-out .5s !important;}
+
+// #tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) > div.overflow .tab-strip {animation: ofh 0s .5s forwards !important;}
+// @keyframes ofh {to {overflow-y: hidden;}}
+
+// /* newtab position */
+// #tabs-tabbar-container:is(.left, .right) .newtab {left: 0 !important; width: 100%; transition: width .1s .1s !important;}
+// #tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) .newtab {width: 30px; transition: width 0s .5s !important;}
+
+// /* reserved inner space for minimized tabbar by only push webview-container inward */
+// #browser:not(.fullscreen).tabs-left #webview-container {margin-left:30px;}
+// #browser:not(.fullscreen).tabs-right #webview-container {margin-right:30px;}
+
+// /* Option 1: minimize into parent column */
+// #tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) {flex-direction: row;}
+// /* Option 2: minimize into child column */
+// //#tabs-tabbar-container:is(.left, .right):not(:focus-within):not(:hover) {flex-direction: row-reverse;}
+
+// /* canceled left tabbar's parent's DIV width */
+// #main > .inner > div:has(#tabs-tabbar-container.left) {max-width: 0px;}
+
+// /* make space for static statusbar at bottom */
+// /#browser:has(footer > .toolbar-statusbar) #tabs-tabbar-container {margin-bottom: 24px;}
+
+// /* experimental: pin tabbar while mouseover stacked thumbnail & context menu*/
+// #browser:has(#vivaldi-tooltip:is(:hover, :focus-within)) #tabs-tabbar-container.left, #browser.hasfocus:not(:has(#panels-container:focus-within)):not(:hover) #tabs-tabbar-container.left {clip-path:inset(0 -50px 0 -50px); transition: .15s ease-out .1s !important;}
+
+// #browser:has(#vivaldi-tooltip:is(:hover, :focus-within)) #tabs-tabbar-container.right, #browser.hasfocus:not(:has(#panels-container:focus-within)):not(:hover) #tabs-tabbar-container.right {transform:translateX(0); transition: .15s ease-out .1s !important;}
