@@ -5,6 +5,10 @@
     {trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     //mine
+    {trigger: "bleft", replacement: "\\left[ $0 \\right]", options: "mA"},
+    {trigger: "pose", replacement: "\\circ  $0", options: "mA"},
+    {trigger: "gx", replacement: "g(x)$0", options: "mA"},
+    {trigger: "fx", replacement: "f(x)$0", options: "mA"},
     {trigger: "==", replacement: "&=", options: "mA"},
     {trigger: "xor", replacement: "\\oplus", options: "mA"},
     {trigger: "\\sumlim", replacement: "\\sum\\limits_{$0}", options: "mA", priority: 1},
@@ -125,7 +129,7 @@
     {trigger: "sum", replacement: "\\sum", options: "mA"},
     {trigger: "prod", replacement: "\\prod", options: "mA"},
     {trigger: "lim", replacement: "\\lim_{ ${0:n} \\to ${1:\\infty} } $2", options: "mA"},
-    {trigger: "pm", replacement: "\\pm", options: "mA"},
+    {trigger: "pm", replacement: "\\pm  $0", options: "mA"},
     {trigger: "mp", replacement: "\\mp", options: "m"},
     {trigger: "...", replacement: "\\dots", options: "mA"},
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
