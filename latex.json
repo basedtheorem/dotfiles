@@ -15,6 +15,7 @@
     {trigger: "gx", replacement: "g(x)$0", options: "mA"},
     {trigger: "fx", replacement: "f(x)$0", options: "mA"},
     {trigger: "==", replacement: "&=", options: "mA"},
+    {trigger: "eq", replacement: "&= ", options: "mA"},
     {trigger: "xor", replacement: "\\oplus", options: "mA"},
     {trigger: "\\sumlim", replacement: "\\sum\\limits_{$0}", options: "mA", priority: 1},
     {trigger: "vdot", replacement: "\\vdots $0", options: "mA", priority: 1},
@@ -113,7 +114,7 @@
     {trigger: "([^\\\\])(arcsin|arccos|arctan|arccot|arccsc|arcsec|sin|cos|tan|cot|csc)", replacement: "[[0]]\\[[1]]", options: "rmA"},
     {trigger: "\\\\(arcsin|arccos|arctan|arccot|arccsc|arcsec|sin|cos|tan|cot|csc)([A-Za-gi-z])", replacement: "\\[[0]] [[1]]", options: "rmA"}, // Insert space after trig funcs. Skips letter "h" to allow sinh, cosh, etc.
     {trigger: "\\\\(arcsinh|arccosh|arctanh|arccoth|arcsch|arcsech|sinh|cosh|tanh|coth|csch)([A-Za-z])", replacement: "\\[[0]] [[1]]", options: "rmA"}, // Insert space after trig funcs
-    {trigger: "\\\\(neq|geq|leq|gg|ll|sim)([0-9]+)", replacement: "\\[[0]] [[1]]", options: "rmA"}, // Insert space after inequality symbols
+    {trigger: "\\\\(neq|geq|leq|ll|sim)([0-9]+)", replacement: "\\[[0]] [[1]]", options: "rmA"}, // Insert space after inequality symbols
     {trigger: "trace", replacement: "\\mathrm{Tr}", options: "mA"},
     {trigger: "det", replacement: "\\det", options: "mA"},
     {trigger: "re", replacement: "\\mathrm{Re}", options: "mA"},
@@ -220,6 +221,7 @@
     {trigger: "de([A-Za-z])([A-Za-z])", replacement: "\\frac{ d[[0]] }{ d[[1]] } ", options: "rm"},
     {trigger: "de([A-Za-z])([A-Za-z])2", replacement: "\\frac{ d^{2}[[0]] }{ d[[1]]^{2} } ", options: "rmA"},
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
+    {trigger: "ddx", replacement: "\\frac{d}{dx} ", options: "mA"},
 
 
 
