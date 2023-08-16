@@ -1,0 +1,11 @@
+.markdown-source-view.is-readable-line-width .CodeMirror,
+.markdown-preview-view.is-readable-line-width .CodeMirror,
+.markdown-source-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.workspace-leaf {
+  max-width: 850px !important;
+  // max-width: 9999999999px !important;
+  /* min-width: 400px !important; */
+  margin: auto;
+  --tab-stacked-pane-width: 720px !important;
+}
