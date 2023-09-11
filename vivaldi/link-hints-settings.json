@@ -1,0 +1,17 @@
+{
+  "autoActivate": false,
+  "chars": "tnseriaoplfuwydhvmck",
+  "css": ".root {\n  font-family: Iosevka;\n}\n\n.hint {\n  font-size: 16px;\n  padding: 3px;\n  display: grid;\n  place-items: center;\n  color: white;\n  background-color: royalblue;\n  border: solid 1px #181818;\n  text-transform: lowercase;\n  font-weight: 700;\n  line-height: 1;\n  white-space: nowrap;\n}\n\n.highlighted {\n  color: black;\n  background-color: indianred;\n}\n\n.hint .matchedChars {\n  color: black;\n  opacity: 1;\n}\n\n.highlighted .matchedChars {\n  color: white !important;\n  opacity: 1;\n}\n\n.matchedText {\n  border-bottom: 3px solid cadetblue;\n  box-sizing: border-box;\n}\n\n.status {\n  font-size: 14px;\n  padding: 4px 6px;\n  color: white;\n  background-color: salmon;\n  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);\n  bottom: 0;\n  right: 0;\n  line-height: 1;\n}\n\n.peek .hint:not(.hasMatchedChars):not(.highlighted) {\n  opacity: 0.2;\n}\n\n.mixedCase {\n  text-transform: none;\n}\n\n.hidden,\n.hint:not(.hidden) ~ .shruggie,\n.status:empty {\n  opacity: 0 !important;\n}",
+  "normal.alt-J": null,
+  "normal.alt-K": null,
+  "normal.alt-L": null,
+  "normal.alt-j": null,
+  "normal.alt-k": null,
+  "normal.alt-l": null,
+  "normal.alt-shift-ArrowUp": null,
+  "normal.ctrl-:": "EnterHintsMode_BackgroundTab",
+  "normal.ctrl-;": "EnterHintsMode_Click",
+  "normal.ctrl-M": "EnterHintsMode_ManyTab",
+  "normal.ctrl-[": "EnterHintsMode_Select",
+  "normal.ctrl-m": "EnterHintsMode_ManyClick"
+}

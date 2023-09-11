@@ -1,0 +1,62 @@
+.root {
+  font-family: Iosevka;
+}
+
+.hint {
+  font-size: 16px;
+  padding: 3px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background-color: royalblue;
+  border: solid 1px #181818;
+  text-transform: lowercase;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.highlighted {
+  color: black;
+  background-color: indianred;
+}
+
+.hint .matchedChars {
+  color: black;
+  opacity: 1;
+}
+
+.highlighted .matchedChars {
+  color: white !important;
+  opacity: 1;
+}
+
+.matchedText {
+  border-bottom: 3px solid cadetblue;
+  box-sizing: border-box;
+}
+
+.status {
+  font-size: 14px;
+  padding: 4px 6px;
+  color: white;
+  background-color: salmon;
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  right: 0;
+  line-height: 1;
+}
+
+.peek .hint:not(.hasMatchedChars):not(.highlighted) {
+  opacity: 0.2;
+}
+
+.mixedCase {
+  text-transform: none;
+}
+
+.hidden,
+.hint:not(.hidden) ~ .shruggie,
+.status:empty {
+  opacity: 0 !important;
+}
